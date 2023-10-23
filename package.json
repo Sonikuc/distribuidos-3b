@@ -1,21 +1,21 @@
 {
-  "name": "distribuidos",
+  "name": "distribuidos-3b",
   "version": "1.0.0",
-  "description": "proyecto de distribuidos practica 2c",
+  "description": "proyecto de distribuidos practica 3b",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dacarvajal76/distribuidos.git"
+    "url": "git+https://github.com/Sonikuc/distribuidos-3b.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dacarvajal76/distribuidos/issues"
+    "url": "https://github.com/Sonikuc/distribuidos-3b/issues"
   },
-  "homepage": "https://github.com/dacarvajal76/distribuidos#readme",
+  "homepage": "https://github.com/Sonikuc/distribuidos-3b#readme",
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^7.6.3",
