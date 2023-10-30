@@ -1,9 +1,23 @@
 
 version: '3.8'
 
-services: 
+services:
+  db:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
   web:
     platform: linux/x86_64
     build: .
     ports:
       - 3000:3000
+    depends_on:
+      - db
+volumes:
+  mongo-data:
