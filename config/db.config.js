@@ -1,18 +1,23 @@
-const mongoose = require('mongoose');
-const uri = "mongodb://root:example@db:27017/";
-const connectDB = async () => {
-    try {
-        await mongoose.connect(uri,
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true
-            });
-        console.log("MongoDB Connected")
-    }
-    catch (error) {
-        console.error(error.message);
-        process.exit(1);
-    }
-}
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
 
-module.exports = connectDB;
+// uri from mongo atlas cloud db
+var uri = "mongodb://mongo:27017"
+
+// Declare a variable named option and assign optional settings
+const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+};
+
+// Connect MongoDB Local using mongoose connect method
+mongoose.connect(uri, options).then(() => {
+    console.log("Database connection established!");
+},
+    err => {
+        {
+            console.log("Error connecting Database instance due to:", err);
+        }
+    });
+
+module.exports = mongoose;

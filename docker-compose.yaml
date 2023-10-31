@@ -1,23 +1,22 @@
-
-version: '3.8'
-
+version: '3'
 services:
-  db:
-    image: mongo:4.0.0
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-    ports:
-      - 27017:27017
+  app:
+    container_name: web-app
     volumes:
-      - mongo-data:/data/db
-  web:
-    platform: linux/x86_64
+      - .:/app
+    restart: always
     build: .
     ports:
-      - 3000:3000
-    depends_on:
-      - db
+      - '3000:3000'
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo:4-focal
+    restart: always 
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
 volumes:
   mongo-data:
