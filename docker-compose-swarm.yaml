@@ -5,7 +5,7 @@ services:
     volumes:
       - .:/app
     restart: always
-    build: .
+    image: sonikuc/distribuidos-3b
     ports:
       - '3000:3000'
     links:
@@ -17,6 +17,8 @@ services:
     ports:
       - '27017:27017'
     volumes:
-      - mongo-data:/data/db
+      - type: bind
+        source: "/data/gv0/vols/distribuidos-3b"
+        target: "/my/own/api"
 volumes:
   mongo-data:
