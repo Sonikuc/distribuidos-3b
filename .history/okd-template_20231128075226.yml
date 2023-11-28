@@ -186,8 +186,6 @@ objects:
             env:
             - name: PORT
               value: '3000'
-            - name: DATABASE_URI
-              value: 'mongodb://api-mongodb.pj-dasuarez-19.svc:27017/mongodb'
             ports:
             - containerPort: 3000
               protocol: TCP

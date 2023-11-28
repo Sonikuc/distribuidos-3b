@@ -1,11 +1,8 @@
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
-// Variable de entorno con la conexión a la base de datos
-const uriEnv = getEnv("DATABASE_URI");
-
-// Variable local que se usa para la conexión
-var uri = uriEnv;
+// uri from mongo atlas cloud db
+var uri = "mongodb://mongo:27017"
 
 // Declare a variable named option and assign optional settings
 const options = {
