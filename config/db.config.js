@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 // Variable de entorno con la conexión a la base de datos
-const uriEnv = 'mongodb://api-mongodb.pj-dasuarez-19.svc:27017/mongodb';
+const uriEnv = 'api-mongodb.pj-dasuarez-19.svc';
 
 // Variable local que se usa para la conexión
 var uri = uriEnv;
