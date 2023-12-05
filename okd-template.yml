@@ -6,8 +6,8 @@ metadata:
     description: >-
       Platilla de despliegue para distribuidos2c
     tags: "nodejs"
-    openshift.io/documentation-url: "https://github.com/Sonikuc/distribuidos-3b"
-    openshift.io/suport-url: "https://github.com/Sonikuc/distribuidos-3b"
+    openshift.io/documentation-url: "https://github.com/Sonikuc/distribuidos3b"
+    openshift.io/suport-url: "https://github.com/Sonikuc/distribuidos3b"
 
 parameters:
   - name: APP_NAME
@@ -182,7 +182,7 @@ objects:
             name: "${APP_NAME}-appserver"
         spec:
           containers:
-          - image: 'sonikuc/distribuidos-3b'
+          - image: 'sonikuc/distribuidos3b'
             imagePullPolicy: Always
             name: appserver
             args:
